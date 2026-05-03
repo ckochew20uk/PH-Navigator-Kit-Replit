@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "ph-navigator-kit",
+  "name": "replit-ph-navigator",
   "main": "worker.ts",
   "compatibility_date": "2026-05-03",
   "assets": {
