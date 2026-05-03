@@ -5,12 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 const colors = {
-  deepPlum: "#4A3268",
-  coralRose: "#D96B55",
+  deepPlum: "#1B5FAF",
+  coralRose: "#E8735A",
   seafoamTeal: "#38AFA3",
-  softLavender: "#A88FCA",
+  softLavender: "#7EB8D4",
   warmCream: "#FAF7F2",
-  deepCharcoal: "#2C2438",
+  deepCharcoal: "#1C3347",
   white: "#FFFFFF",
 };
 
@@ -27,7 +27,7 @@ const Logo = () => (
   <div className="flex items-center gap-2">
     <LogoMark />
     <div className="flex items-baseline gap-1 text-2xl">
-      <span className="font-bold text-[#4A3268]" style={{ fontFamily: "'Playfair Display', serif" }}>PH</span>
+      <span className="font-bold text-[#1B5FAF]" style={{ fontFamily: "'Playfair Display', serif" }}>PH</span>
       <span className="font-semibold text-[#38AFA3]" style={{ fontFamily: "'Nunito', sans-serif" }}>Navigator</span>
     </div>
   </div>
@@ -35,7 +35,7 @@ const Logo = () => (
 
 export function BrandInAction() {
   return (
-    <div className="min-h-screen text-[#2C2438]" style={{ backgroundColor: colors.warmCream, fontFamily: "'Nunito', sans-serif" }}>
+    <div className="min-h-screen text-[#1C3347]" style={{ backgroundColor: colors.warmCream, fontFamily: "'Nunito', sans-serif" }}>
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -55,10 +55,10 @@ export function BrandInAction() {
       </style>
 
       {/* Navigation */}
-      <header className="sticky top-0 z-50 w-full border-b border-[#A88FCA]/30" style={{ backgroundColor: colors.warmCream }}>
+      <header className="sticky top-0 z-50 w-full border-b border-[#7EB8D4]/30" style={{ backgroundColor: colors.warmCream }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <Logo />
-          <nav className="hidden md:flex items-center gap-6 font-semibold text-[#4A3268]">
+          <nav className="hidden md:flex items-center gap-6 font-semibold text-[#1B5FAF]">
             <a href="#" className="hover:text-[#38AFA3] transition-colors">About PH</a>
             <a href="#" className="hover:text-[#38AFA3] transition-colors">Resources</a>
             <a href="#" className="hover:text-[#38AFA3] transition-colors">Support Groups</a>
@@ -77,17 +77,17 @@ export function BrandInAction() {
           <LogoMark className="w-[800px] h-[800px] -mr-48" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start max-w-3xl">
-          <h1 className="font-heading text-5xl sm:text-6xl font-bold leading-tight mb-6 text-[#4A3268]">
+          <h1 className="font-heading text-5xl sm:text-6xl font-bold leading-tight mb-6 text-[#1B5FAF]">
             You do not have to navigate pulmonary hypertension alone.
           </h1>
-          <p className="text-xl mb-10 text-[#2C2438]/80 max-w-2xl leading-relaxed">
+          <p className="text-xl mb-10 text-[#1C3347]/80 max-w-2xl leading-relaxed">
             PH Navigator is here to guide you with trusted information, resources, and connections to support groups across Australia. We are your compass on this journey.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <Button style={{ backgroundColor: colors.coralRose, color: colors.white }} className="hover:opacity-90 text-lg px-8 py-6 rounded-full font-bold">
               Explore Resources
             </Button>
-            <Button variant="outline" style={{ borderColor: colors.deepPlum, color: colors.deepPlum }} className="hover:bg-[#4A3268]/5 text-lg px-8 py-6 rounded-full font-bold bg-transparent">
+            <Button variant="outline" style={{ borderColor: colors.deepPlum, color: colors.deepPlum }} className="hover:bg-[#1B5FAF]/5 text-lg px-8 py-6 rounded-full font-bold bg-transparent">
               Find a Support Group
             </Button>
           </div>
@@ -100,10 +100,10 @@ export function BrandInAction() {
           <Card className="border-t-4 shadow-sm" style={{ borderTopColor: colors.seafoamTeal }}>
             <CardHeader>
               <Heart className="w-8 h-8 mb-4" style={{ color: colors.coralRose }} />
-              <CardTitle className="font-heading text-2xl text-[#4A3268]">What is PH?</CardTitle>
+              <CardTitle className="font-heading text-2xl text-[#1B5FAF]">What is PH?</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[#2C2438]/80 leading-relaxed">
+              <p className="text-[#1C3347]/80 leading-relaxed">
                 Pulmonary hypertension (PH) is a rare lung disease that affects the blood vessels in the lungs and the right side of the heart.
               </p>
             </CardContent>
@@ -111,10 +111,10 @@ export function BrandInAction() {
           <Card className="border-t-4 shadow-sm" style={{ borderTopColor: colors.seafoamTeal }}>
             <CardHeader>
               <Wind className="w-8 h-8 mb-4" style={{ color: colors.seafoamTeal }} />
-              <CardTitle className="font-heading text-2xl text-[#4A3268]">Types of PH</CardTitle>
+              <CardTitle className="font-heading text-2xl text-[#1B5FAF]">Types of PH</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[#2C2438]/80 leading-relaxed">
+              <p className="text-[#1C3347]/80 leading-relaxed">
                 There are five main groups of pulmonary hypertension, each with different causes and treatment approaches.
               </p>
             </CardContent>
@@ -122,10 +122,10 @@ export function BrandInAction() {
           <Card className="border-t-4 shadow-sm" style={{ borderTopColor: colors.seafoamTeal }}>
             <CardHeader>
               <Activity className="w-8 h-8 mb-4" style={{ color: colors.softLavender }} />
-              <CardTitle className="font-heading text-2xl text-[#4A3268]">Life with PH</CardTitle>
+              <CardTitle className="font-heading text-2xl text-[#1B5FAF]">Life with PH</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[#2C2438]/80 leading-relaxed">
+              <p className="text-[#1C3347]/80 leading-relaxed">
                 Living with PH presents unique challenges, but with the right care team and support, you can manage your symptoms effectively.
               </p>
             </CardContent>
@@ -136,8 +136,8 @@ export function BrandInAction() {
       {/* Featured Resources */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-4xl font-bold text-[#4A3268] mb-4">Resources for your journey</h2>
-          <p className="text-lg text-[#2C2438]/70 max-w-2xl mx-auto">Expert-reviewed information to help you understand your diagnosis, treatments, and daily management.</p>
+          <h2 className="font-heading text-4xl font-bold text-[#1B5FAF] mb-4">Resources for your journey</h2>
+          <p className="text-lg text-[#1C3347]/70 max-w-2xl mx-auto">Expert-reviewed information to help you understand your diagnosis, treatments, and daily management.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
@@ -145,13 +145,13 @@ export function BrandInAction() {
             { tag: "Treatment", title: "Managing Your Medications", excerpt: "Learn about the different types of PH therapies, how they work, and strategies for managing side effects." },
             { tag: "Communication", title: "Talking to Your Care Team", excerpt: "Tips for effectively communicating your symptoms and concerns during specialist appointments." }
           ].map((item, i) => (
-            <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-[#A88FCA]/20 flex flex-col h-full hover:shadow-md transition-shadow">
+            <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-[#7EB8D4]/20 flex flex-col h-full hover:shadow-md transition-shadow">
               <div className="p-6 flex flex-col flex-grow">
                 <span className="text-xs font-bold uppercase tracking-wider mb-4 inline-block" style={{ color: colors.seafoamTeal }}>
                   {item.tag}
                 </span>
-                <h3 className="font-heading text-2xl font-bold mb-3 text-[#4A3268]">{item.title}</h3>
-                <p className="text-[#2C2438]/80 mb-6 flex-grow">{item.excerpt}</p>
+                <h3 className="font-heading text-2xl font-bold mb-3 text-[#1B5FAF]">{item.title}</h3>
+                <p className="text-[#1C3347]/80 mb-6 flex-grow">{item.excerpt}</p>
                 <a href="#" className="font-bold flex items-center gap-1 hover:underline mt-auto" style={{ color: colors.coralRose }}>
                   Read more <span aria-hidden="true">&rarr;</span>
                 </a>
@@ -166,11 +166,11 @@ export function BrandInAction() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-heading text-4xl font-bold text-[#4A3268] mb-6">Find others who understand</h2>
-              <p className="text-lg text-[#2C2438]/80 mb-6">
+              <h2 className="font-heading text-4xl font-bold text-[#1B5FAF] mb-6">Find others who understand</h2>
+              <p className="text-lg text-[#1C3347]/80 mb-6">
                 Connecting with people who share similar experiences can be profoundly validating. Our network of patient support groups offers a safe space to share stories, advice, and encouragement.
               </p>
-              <ul className="space-y-3 mb-8 text-[#2C2438]/80">
+              <ul className="space-y-3 mb-8 text-[#1C3347]/80">
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full" style={{ backgroundColor: colors.coralRose }}></div>
                   In-person meetings across major cities
@@ -186,16 +186,16 @@ export function BrandInAction() {
               </ul>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#A88FCA]/20">
-              <h3 className="font-heading text-2xl font-bold text-[#4A3268] mb-2">Find a Support Group</h3>
-              <p className="text-[#2C2438]/70 mb-6">Enter your postcode to find local and virtual meetings near you.</p>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#7EB8D4]/20">
+              <h3 className="font-heading text-2xl font-bold text-[#1B5FAF] mb-2">Find a Support Group</h3>
+              <p className="text-[#1C3347]/70 mb-6">Enter your postcode to find local and virtual meetings near you.</p>
               
               <div className="space-y-4">
                 <div>
                   <label htmlFor="postcode" className="sr-only">Postcode</label>
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <Input id="postcode" placeholder="e.g. 2000" className="pl-10 py-6 text-lg rounded-xl border-[#A88FCA]/40 focus-visible:ring-[#38AFA3]" />
+                    <Input id="postcode" placeholder="e.g. 2000" className="pl-10 py-6 text-lg rounded-xl border-[#7EB8D4]/40 focus-visible:ring-[#38AFA3]" />
                   </div>
                 </div>
                 <Button className="w-full py-6 text-lg rounded-xl font-bold" style={{ backgroundColor: colors.deepPlum, color: colors.white }}>
@@ -210,7 +210,7 @@ export function BrandInAction() {
       {/* Stats Bar */}
       <section className="py-16 text-center" style={{ backgroundColor: colors.deepPlum }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-[#A88FCA]/30">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-[#7EB8D4]/30">
             <div className="pt-6 md:pt-0">
               <p className="font-heading text-3xl font-bold text-white mb-2">6,000+</p>
               <p className="text-[#FAF7F2]/80">Australians living with PH</p>

@@ -2,11 +2,11 @@ import React from 'react';
 
 // Brand Colors
 const colors = {
-  deepPlum: '#4A3268',
-  coralRose: '#D96B55',
+  deepPlum: '#1B5FAF',
+  coralRose: '#E8735A',
   seafoamTeal: '#38AFA3',
   warmCream: '#FAF7F2',
-  deepCharcoal: '#2C2438',
+  deepCharcoal: '#1C3347',
   white: '#FFFFFF'
 };
 

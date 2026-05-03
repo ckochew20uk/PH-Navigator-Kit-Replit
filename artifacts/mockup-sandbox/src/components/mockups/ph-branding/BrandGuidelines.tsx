@@ -8,13 +8,13 @@ export function BrandGuidelines() {
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
         .brand-guidelines {
-          --color-plum: #4A3268;
-          --color-coral: #D96B55;
-          --color-lavender: #A88FCA;
+          --color-plum: #1B5FAF;
+          --color-coral: #E8735A;
+          --color-lavender: #7EB8D4;
           --color-lavender-light: #F0EAF9;
           --color-teal: #38AFA3;
           --color-cream: #FAF7F2;
-          --color-charcoal: #2C2438;
+          --color-charcoal: #1C3347;
 
           --font-display: 'Playfair Display', serif;
           --font-body: 'Nunito', sans-serif;
@@ -134,7 +134,7 @@ export function BrandGuidelines() {
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 rounded-full bg-[var(--color-plum)] shrink-0 shadow-sm" />
               <div>
-                <p className="font-bold mb-1">Deep Plum for hierarchy</p>
+                <p className="font-bold mb-1">Navy Blue for hierarchy</p>
                 <p className="text-sm opacity-80">Use for headings, main navigation, and key structural elements.</p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export function BrandGuidelines() {
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 rounded-full bg-[var(--color-coral)] shrink-0 shadow-sm" />
               <div>
-                <p className="font-bold mb-1">Coral Rose for action</p>
+                <p className="font-bold mb-1">Coral for action</p>
                 <p className="text-sm opacity-80">Use for primary CTAs, alerts, and moments of emotional emphasis.</p>
               </div>
             </div>
@@ -410,7 +410,7 @@ export function BrandGuidelines() {
           <X className="text-red-500 shrink-0 mt-1" />
           <div>
             <p className="font-bold text-red-800 mb-1">NOT Approved</p>
-            <p className="text-sm text-red-700 m-0">Do not place logo on busy photography without an overlay, or on any background that drops contrast below 4.5:1 (such as Coral Rose or Soft Lavender).</p>
+            <p className="text-sm text-red-700 m-0">Do not place logo on busy photography without an overlay, or on any background that drops contrast below 4.5:1 (such as Coral or Sky Blue).</p>
           </div>
         </div>
       </section>
@@ -545,12 +545,12 @@ export function BrandGuidelines() {
             <div className="code-panel">
 <pre>{`:root {
   /* Brand Colours */
-  --color-plum: #4A3268;
-  --color-coral: #D96B55;
-  --color-lavender: #A88FCA;
+  --color-plum: #1B5FAF;
+  --color-coral: #E8735A;
+  --color-lavender: #7EB8D4;
   --color-teal: #38AFA3;
   --color-cream: #FAF7F2;
-  --color-charcoal: #2C2438;
+  --color-charcoal: #1C3347;
   
   /* Typography */
   --font-display: 'Playfair Display', serif;
@@ -566,12 +566,12 @@ export function BrandGuidelines() {
   extend: {
     colors: {
       brand: {
-        plum: '#4A3268',
-        coral: '#D96B55',
-        lavender: '#A88FCA',
+        plum: '#1B5FAF',
+        coral: '#E8735A',
+        lavender: '#7EB8D4',
         teal: '#38AFA3',
         cream: '#FAF7F2',
-        charcoal: '#2C2438',
+        charcoal: '#1C3347',
       }
     },
     fontFamily: {
