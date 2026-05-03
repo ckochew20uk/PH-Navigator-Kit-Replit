@@ -78,7 +78,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5">
           {navItems.map((item) => (
             item.sub ? (
               <DropdownMenu key={item.title}>
@@ -86,11 +86,11 @@ export function Navbar() {
                   <Button
                     variant="ghost"
                     className={cn(
-                      "text-base font-semibold px-3 py-2 h-auto text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-md",
+                      "text-sm font-semibold px-2.5 py-2 h-auto text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-md",
                       isActive(item.path) && "text-primary bg-muted/50"
                     )}
                   >
-                    {item.title} <ChevronDown className="ml-1 h-4 w-4" />
+                    {item.title} <ChevronDown className="ml-1 h-3.5 w-3.5" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start" className="w-64 p-2 bg-card border-border">
@@ -101,7 +101,7 @@ export function Navbar() {
                   </DropdownMenuItem>
                   {item.sub.map((subItem) => (
                     <DropdownMenuItem asChild key={subItem.path} className="p-0">
-                      <Link href={subItem.path} className="block w-full px-4 py-2 text-base hover:bg-muted hover:text-primary rounded-sm">
+                      <Link href={subItem.path} className="block w-full px-4 py-2 text-sm hover:bg-muted hover:text-primary rounded-sm">
                         {subItem.title}
                       </Link>
                     </DropdownMenuItem>
@@ -113,7 +113,7 @@ export function Navbar() {
                 <Button
                   variant="ghost"
                   className={cn(
-                    "text-base font-semibold px-3 py-2 h-auto text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-md",
+                    "text-sm font-semibold px-2.5 py-2 h-auto text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-md",
                     isActive(item.path) && "text-primary bg-muted/50"
                   )}
                 >
