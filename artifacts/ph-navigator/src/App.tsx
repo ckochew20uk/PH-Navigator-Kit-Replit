@@ -37,6 +37,9 @@ const CarersRole = React.lazy(() => import('@/pages/caring-for-someone/carers-ro
 const CarerWellbeing = React.lazy(() => import('@/pages/caring-for-someone/carer-wellbeing'));
 const CarerSupport = React.lazy(() => import('@/pages/caring-for-someone/carer-support'));
 
+// Resource Library
+const ResourceLibrary = React.lazy(() => import('@/pages/resource-library'));
+
 // Directory & About
 const FindSpecialist = React.lazy(() => import('@/pages/find-specialist'));
 const AboutHub = React.lazy(() => import('@/pages/about/index'));
@@ -73,6 +76,8 @@ function Router() {
       <Route path="/caring-for-someone/carers-role" component={CarersRole} />
       <Route path="/caring-for-someone/carer-wellbeing" component={CarerWellbeing} />
       <Route path="/caring-for-someone/carer-support" component={CarerSupport} />
+
+      <Route path="/resource-library" component={ResourceLibrary} />
 
       <Route path="/find-specialist" component={FindSpecialist} />
       

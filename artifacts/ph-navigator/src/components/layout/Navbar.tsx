@@ -58,6 +58,7 @@ export function Navbar() {
         { title: 'Carer Support Networks', path: '/caring-for-someone/carer-support' },
       ],
     },
+    { title: 'Resource Library', path: '/resource-library' },
     { title: 'Find a Specialist', path: '/find-specialist' },
     {
       title: 'About Us',
