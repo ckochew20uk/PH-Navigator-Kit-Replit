@@ -33,8 +33,8 @@ export function Footer() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
             <div className="lg:col-span-2">
-              <div className="bg-white/95 inline-block p-3 rounded-lg mb-6 shadow-md">
-                <Logo />
+              <div className="bg-white inline-block p-4 rounded-xl mb-6 shadow-md">
+                <Logo size="lg" />
               </div>
               <p className="text-primary-foreground/90 text-lg mb-6 leading-relaxed max-w-md">
                 Navigating life with pulmonary hypertension — together. A trusted guide for patients and carers across Australia and New Zealand.

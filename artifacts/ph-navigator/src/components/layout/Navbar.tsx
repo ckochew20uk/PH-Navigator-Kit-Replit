@@ -74,7 +74,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b shadow-sm">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Logo />
+          <Logo size="md" />
         </Link>
 
         {/* Desktop Nav */}

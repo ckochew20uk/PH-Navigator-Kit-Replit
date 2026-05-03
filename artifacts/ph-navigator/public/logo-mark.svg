@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Right teal pin (behind) -->
+  <path d="M60 88 C50 74 40 60 40 40 A20 20 0 1 1 80 40 C80 60 70 74 60 88Z" fill="#3AADA8"/>
+  <!-- Left navy pin (front) -->
+  <path d="M40 82 C30 68 18 54 18 34 A22 22 0 1 1 62 34 C62 54 50 68 40 82Z" fill="#1B5FAF"/>
+  <!-- White ring -->
+  <circle cx="50" cy="50" r="14" fill="white"/>
+  <!-- Coral heart centre -->
+  <circle cx="50" cy="50" r="10" fill="#E8735A"/>
+</svg>
