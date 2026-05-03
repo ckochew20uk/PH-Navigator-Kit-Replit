@@ -76,6 +76,7 @@
     "zod": "catalog:"
   },
   "dependencies": {
+    "fuse.js": "^7.3.0",
     "leaflet": "^1.9.4",
     "react-leaflet": "^5.0.0"
   }

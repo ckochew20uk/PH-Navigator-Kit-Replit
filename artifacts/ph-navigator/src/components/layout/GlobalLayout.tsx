@@ -4,12 +4,11 @@ import { UtilityHeader } from './UtilityHeader';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { MobileBottomNav } from './MobileBottomNav';
+import { SearchModal } from '@/components/search/SearchModal';
+import { SearchProvider, useSearch } from '@/contexts/SearchContext';
 
-interface GlobalLayoutProps {
-  children: React.ReactNode;
-}
-
-export function GlobalLayout({ children }: GlobalLayoutProps) {
+function LayoutInner({ children }: { children: React.ReactNode }) {
+  const { isOpen, closeSearch } = useSearch();
   return (
     <div className="min-h-[100dvh] flex flex-col bg-background text-foreground font-sans">
       <CrisisBanner />
@@ -26,6 +25,19 @@ export function GlobalLayout({ children }: GlobalLayoutProps) {
       </main>
       <Footer />
       <MobileBottomNav />
+      <SearchModal open={isOpen} onClose={closeSearch} />
     </div>
+  );
+}
+
+interface GlobalLayoutProps {
+  children: React.ReactNode;
+}
+
+export function GlobalLayout({ children }: GlobalLayoutProps) {
+  return (
+    <SearchProvider>
+      <LayoutInner>{children}</LayoutInner>
+    </SearchProvider>
   );
 }

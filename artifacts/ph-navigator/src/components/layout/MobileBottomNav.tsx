@@ -4,7 +4,7 @@ import {
   Home,
   HeartPulse,
   Leaf,
-  BookOpen,
+  Search,
   LayoutGrid,
   X,
   ChevronRight,
@@ -14,8 +14,10 @@ import {
   MapPin,
   Info,
   HeartHandshake,
+  BookOpen,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useSearch } from "@/contexts/SearchContext";
 
 const bottomTabs = [
   { label: "Home", path: "/", icon: Home, exact: true },
@@ -80,6 +82,7 @@ export function MobileBottomNav() {
   const [location] = useLocation();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const { openSearch } = useSearch();
 
   const isActive = (path: string, exact = false) =>
     exact ? location === path : location === path || location.startsWith(path + "/");
@@ -91,6 +94,11 @@ export function MobileBottomNav() {
 
   const toggleSection = (title: string) =>
     setExpandedSection((prev) => (prev === title ? null : title));
+
+  const handleSearchClick = () => {
+    closeDrawer();
+    openSearch();
+  };
 
   return (
     <>
@@ -106,8 +114,8 @@ export function MobileBottomNav() {
           {/* Drawer panel */}
           <div className="lg:hidden fixed bottom-16 left-0 right-0 z-50 rounded-t-2xl bg-white shadow-2xl border-t border-border/30 max-h-[75dvh] flex flex-col">
             {/* Handle + header */}
-            <div className="flex items-center justify-between px-5 pt-4 pb-3 border-b border-border/30">
-              <div className="w-10 h-1 rounded-full bg-muted mx-auto absolute left-1/2 -translate-x-1/2 top-2" />
+            <div className="relative flex items-center justify-between px-5 pt-4 pb-3 border-b border-border/30">
+              <div className="w-10 h-1 rounded-full bg-muted absolute left-1/2 -translate-x-1/2 top-2" />
               <p className="text-sm font-bold text-foreground/60 uppercase tracking-wider">More sections</p>
               <button
                 onClick={closeDrawer}
@@ -117,6 +125,15 @@ export function MobileBottomNav() {
                 <X className="h-5 w-5" />
               </button>
             </div>
+
+            {/* Search shortcut inside drawer */}
+            <button
+              onClick={handleSearchClick}
+              className="mx-3 mt-3 flex items-center gap-3 px-4 py-3 rounded-xl bg-muted/60 hover:bg-muted text-foreground/60 hover:text-foreground transition-colors"
+            >
+              <Search className="h-4 w-4" />
+              <span className="text-sm font-medium">Search all topics…</span>
+            </button>
 
             {/* Scrollable section list */}
             <div className="overflow-y-auto flex-1 px-3 py-2">
@@ -128,15 +145,12 @@ export function MobileBottomNav() {
                 return (
                   <div key={section.path} className="mb-1">
                     <div className="flex items-center">
-                      {/* Main section link / tap area */}
                       <Link
                         href={section.path}
                         onClick={section.sub ? undefined : closeDrawer}
                         className={cn(
                           "flex-1 flex items-center gap-3 px-3 py-3.5 rounded-xl transition-colors",
-                          active
-                            ? "bg-primary/8 text-primary"
-                            : "text-foreground hover:bg-muted"
+                          active ? "bg-primary/8 text-primary" : "text-foreground hover:bg-muted"
                         )}
                       >
                         <span className={cn(
@@ -148,7 +162,6 @@ export function MobileBottomNav() {
                         <span className="font-semibold text-base">{section.title}</span>
                       </Link>
 
-                      {/* Expand toggle for sections with sub-items */}
                       {section.sub && (
                         <button
                           onClick={() => toggleSection(section.title)}
@@ -162,7 +175,6 @@ export function MobileBottomNav() {
                       )}
                     </div>
 
-                    {/* Sub-items */}
                     {section.sub && isExpanded && (
                       <div className="ml-12 mb-1 space-y-0.5">
                         {section.sub.map((sub) => (
@@ -221,6 +233,16 @@ export function MobileBottomNav() {
               </Link>
             );
           })}
+
+          {/* Search tab */}
+          <button
+            onClick={handleSearchClick}
+            className="flex-1 flex flex-col items-center justify-center gap-0.5 transition-colors pt-1 text-foreground/45 hover:text-foreground/70"
+            aria-label="Search"
+          >
+            <Search className="h-6 w-6" />
+            <span className="text-[10px] font-semibold tracking-wide">Search</span>
+          </button>
 
           {/* More tab */}
           <button

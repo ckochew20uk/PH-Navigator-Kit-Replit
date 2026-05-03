@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'wouter';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Search } from 'lucide-react';
 import { Logo } from '@/components/ui/logo';
 import { Button } from '@/components/ui/button';
 import {
@@ -10,9 +10,11 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { cn } from '@/lib/utils';
+import { useSearch } from '@/contexts/SearchContext';
 
 export function Navbar() {
   const [location] = useLocation();
+  const { openSearch } = useSearch();
 
   const isActive = (path: string) => location.startsWith(path);
 
@@ -69,13 +71,13 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b shadow-sm">
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+      <div className="container mx-auto px-4 h-20 flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 shrink-0">
           <Logo size="md" />
         </Link>
 
-        {/* Desktop Nav — hidden on mobile (bottom tab bar handles mobile nav) */}
-        <nav className="hidden lg:flex items-center gap-0.5">
+        {/* Desktop Nav — fills available space, right-aligned */}
+        <nav className="hidden lg:flex flex-1 items-center justify-end gap-0.5 min-w-0">
           {navItems.map((item) => (
             item.sub ? (
               <DropdownMenu key={item.title}>
@@ -120,6 +122,20 @@ export function Navbar() {
             )
           ))}
         </nav>
+
+        {/* Search button — visible on all breakpoints */}
+        <Button
+          variant="ghost"
+          onClick={openSearch}
+          className="flex items-center gap-2 text-foreground/60 hover:text-primary hover:bg-muted/60 rounded-lg px-3 py-2 h-auto"
+          aria-label="Search"
+        >
+          <Search className="h-4 w-4" />
+          <span className="hidden lg:inline text-sm font-medium">Search</span>
+          <kbd className="hidden lg:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded border border-border text-[10px] text-foreground/35 font-mono ml-1">
+            ⌘K
+          </kbd>
+        </Button>
       </div>
     </header>
   );
