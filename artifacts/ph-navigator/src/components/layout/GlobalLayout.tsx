@@ -3,6 +3,7 @@ import { CrisisBanner } from './CrisisBanner';
 import { UtilityHeader } from './UtilityHeader';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
+import { MobileBottomNav } from './MobileBottomNav';
 
 interface GlobalLayoutProps {
   children: React.ReactNode;
@@ -14,7 +15,7 @@ export function GlobalLayout({ children }: GlobalLayoutProps) {
       <CrisisBanner />
       <UtilityHeader />
       <Navbar />
-      <main className="flex-1 w-full flex flex-col">
+      <main className="flex-1 w-full flex flex-col pb-16 lg:pb-0">
         <Suspense fallback={
           <div className="flex-1 flex items-center justify-center min-h-[50vh]">
             <div className="animate-pulse text-primary/60 text-xl font-serif">Loading...</div>
@@ -24,6 +25,7 @@ export function GlobalLayout({ children }: GlobalLayoutProps) {
         </Suspense>
       </main>
       <Footer />
+      <MobileBottomNav />
     </div>
   );
 }

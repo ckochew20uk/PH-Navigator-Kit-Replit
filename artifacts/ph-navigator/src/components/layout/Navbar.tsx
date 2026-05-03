@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { Logo } from '@/components/ui/logo';
 import { Button } from '@/components/ui/button';
 import {
@@ -12,10 +12,7 @@ import {
 import { cn } from '@/lib/utils';
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
-
-  const toggleMenu = () => setIsOpen(!isOpen);
 
   const isActive = (path: string) => location.startsWith(path);
 
@@ -77,7 +74,7 @@ export function Navbar() {
           <Logo size="md" />
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav — hidden on mobile (bottom tab bar handles mobile nav) */}
         <nav className="hidden lg:flex items-center gap-0.5">
           {navItems.map((item) => (
             item.sub ? (
@@ -123,41 +120,7 @@ export function Navbar() {
             )
           ))}
         </nav>
-
-        {/* Mobile Toggle */}
-        <Button variant="ghost" size="icon" className="lg:hidden text-primary" onClick={toggleMenu}>
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </Button>
       </div>
-
-      {/* Mobile Nav */}
-      {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-background border-b border-border shadow-md max-h-[calc(100vh-5rem)] overflow-y-auto pb-4">
-          <nav className="flex flex-col px-4 py-2">
-            {navItems.map((item) => (
-              <div key={item.title} className="py-2 border-b border-border/50 last:border-0">
-                <Link href={item.path} onClick={() => setIsOpen(false)} className={cn("block py-2 text-lg font-bold text-primary", isActive(item.path) && "text-destructive")}>
-                  {item.title}
-                </Link>
-                {item.sub && (
-                  <div className="flex flex-col pl-4 mt-1 border-l-2 border-muted">
-                    {item.sub.map((subItem) => (
-                      <Link key={subItem.path} href={subItem.path} onClick={() => setIsOpen(false)} className="py-2 text-base text-foreground/80 hover:text-primary">
-                        {subItem.title}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-            <div className="py-4 mt-2 border-t border-border">
-              <Link href="/for-healthcare-professionals" onClick={() => setIsOpen(false)} className="text-secondary font-semibold">
-                For Healthcare Professionals
-              </Link>
-            </div>
-          </nav>
-        </div>
-      )}
     </header>
   );
 }
