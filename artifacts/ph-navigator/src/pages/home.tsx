@@ -42,9 +42,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl leading-relaxed"
-            >
-              A calm, trusted guide for people living with a rare lung disease in Australia and New Zealand. You don't have to walk this path alone.
-            </motion.p>
+            >A guide for people living with a rare lung disease in Australia and New Zealand. </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -65,7 +63,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Intro / What is PH */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
@@ -131,7 +128,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Main Navigation Cards */}
       <section className="py-20 bg-muted/30 border-y border-border/40">
         <div className="container mx-auto px-4">
@@ -176,7 +172,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Trust Strip */}
       <section className="py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
@@ -194,7 +189,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
