@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'wouter';
-import { motion } from 'framer-motion';
+import { easeOut, motion } from 'framer-motion';
 import { ArrowRight, HeartPulse, ShieldCheck, Users, Activity, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
@@ -16,7 +16,7 @@ export default function Home() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } }
   };
 
   return (
