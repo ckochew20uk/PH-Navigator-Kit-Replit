@@ -55,9 +55,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/living-well">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary/5 text-lg h-14 px-8 rounded-full">
-                  Living with PH
-                </Button>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary/5 text-lg h-14 px-8 rounded-full">Living well with PH</Button>
               </Link>
             </motion.div>
           </div>
