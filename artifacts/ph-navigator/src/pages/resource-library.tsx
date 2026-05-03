@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, easeOut } from 'framer-motion';
 import { FileText, Download, Search, BookOpen, Filter } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -276,7 +276,7 @@ export default function ResourceLibrary() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 16 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: easeOut } },
   };
 
   return (
