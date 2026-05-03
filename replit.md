@@ -25,3 +25,13 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## PH Navigator — Mailchimp Integration
+
+Mailchimp newsletter signup is integrated via manual API credentials (user declined Replit OAuth connector).
+
+- `MAILCHIMP_LIST_ID` — stored as a shared env var (audience ID: `a0668d6ca8`)
+- `MAILCHIMP_API_KEY` — stored as a Replit secret (user's API key, server prefix `us14`)
+
+The newsletter API endpoint is at `artifacts/api-server/src/routes/newsletter.ts` → `POST /api/newsletter/subscribe`.
+If the API key needs to be rotated, the user must update the `MAILCHIMP_API_KEY` secret in the Replit Secrets tab.
