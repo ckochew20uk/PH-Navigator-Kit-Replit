@@ -7,7 +7,10 @@ export function UtilityHeader() {
       <div className="container mx-auto flex justify-between items-center">
         <div>A partnership between PHA Australia & PHSANZ</div>
         <div>
-          <Link href="/for-healthcare-professionals" className="hover:text-primary transition-colors">
+          <Link
+            href="/for-healthcare-professionals"
+            className="inline-block bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full hover:bg-secondary/85 transition-colors"
+          >
             For Healthcare Professionals
           </Link>
         </div>
