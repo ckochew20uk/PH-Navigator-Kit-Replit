@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ph-navigator-kit",
+  "main": "worker.ts",
+  "compatibility_date": "2026-05-03",
+  "assets": {
+    "directory": "artifacts/ph-navigator/dist/public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  }
+}

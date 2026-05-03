@@ -7,7 +7,9 @@
     "build": "pnpm run typecheck && pnpm -r --if-present run build",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
-    "build:ci": "pnpm run typecheck && pnpm -r --if-present --no-bail run build"
+    "build:ci": "pnpm run typecheck && pnpm -r --if-present --no-bail run build",
+    "build:worker": "pnpm --filter @workspace/ph-navigator run build",
+    "deploy:worker": "pnpm run build:worker && npx wrangler deploy"
   },
   "private": true,
   "devDependencies": {
