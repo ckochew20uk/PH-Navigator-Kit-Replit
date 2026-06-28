@@ -120,6 +120,13 @@ export const searchIndex: SearchItem[] = [
     category: "Community",
     keywords: ["stories", "personal", "patient stories", "experiences", "community", "forum", "voices", "carer stories"],
   },
+  {
+    title: "Phase 1 Governance Checklist",
+    description: "Privacy, consent, moderation, retention, and access safeguards for newsletter and Community Voices launch tasks.",
+    path: "/governance-checklist",
+    category: "Community",
+    keywords: ["governance", "privacy", "consent", "Mailchimp", "unsubscribe", "moderation", "data retention", "patient stories", "health information"],
+  },
 
   // Caring for Someone
   {

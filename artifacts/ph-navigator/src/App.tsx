@@ -46,6 +46,7 @@ const AboutHub = React.lazy(() => import('@/pages/about/index'));
 const Partnership = React.lazy(() => import('@/pages/about/partnership'));
 const AdvisoryPanel = React.lazy(() => import('@/pages/about/advisory-panel'));
 const ForProfessionals = React.lazy(() => import('@/pages/for-healthcare-professionals'));
+const GovernanceChecklist = React.lazy(() => import('@/pages/governance-checklist'));
 
 const queryClient = new QueryClient();
 
@@ -86,6 +87,7 @@ function Router() {
       <Route path="/about/advisory-panel" component={AdvisoryPanel} />
 
       <Route path="/for-healthcare-professionals" component={ForProfessionals} />
+      <Route path="/governance-checklist" component={GovernanceChecklist} />
 
       <Route component={NotFound} />
     </Switch>
