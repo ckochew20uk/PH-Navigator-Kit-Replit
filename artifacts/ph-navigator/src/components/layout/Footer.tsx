@@ -83,6 +83,7 @@ export function Footer() {
               <span className="hover:text-white cursor-pointer">Privacy Policy</span>
               <span className="hover:text-white cursor-pointer">Terms of Use</span>
               <span className="hover:text-white cursor-pointer">Accessibility</span>
+              <Link href="/governance-checklist" className="hover:text-white transition-colors">Governance Checklist</Link>
             </div>
           </div>
 

@@ -63,6 +63,9 @@ export default function CommunityVoices() {
           
           <div className="bg-accent/10 border border-accent/20 p-4 rounded-lg mb-12 text-sm text-foreground/70 text-center">
             All stories shared with permission. PHA Australia vets and approves all Community Voices content to ensure a safe, supportive environment.
+            <span className="block mt-2">
+              See the <Link href="/governance-checklist" className="font-semibold text-primary hover:underline">Phase 1 governance checklist</Link> for consent, moderation, withdrawal, retention, and access safeguards for submitted personal or health information.
+            </span>
           </div>
 
           <div className="mx-auto mb-12 max-w-4xl">
