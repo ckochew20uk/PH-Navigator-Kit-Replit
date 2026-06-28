@@ -65,6 +65,20 @@ export default function CommunityVoices() {
             All stories shared with permission. PHA Australia vets and approves all Community Voices content to ensure a safe, supportive environment.
           </div>
 
+          <div className="mx-auto mb-12 max-w-4xl">
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/B33I6_TFVFg?si=FEyGUVIIPYg8FLaT"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+              />
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {stories.map((story) => (
               <Card key={story.id} className="h-full hover:shadow-lg transition-shadow flex flex-col group border-t-4 border-t-transparent hover:border-t-primary">
