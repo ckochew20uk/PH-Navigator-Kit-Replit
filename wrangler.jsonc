@@ -7,5 +7,8 @@
     "directory": "artifacts/ph-navigator/dist/public",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application"
+  },
+  "vars": {
+    "MAILCHIMP_LIST_ID": "e1bd27b3dd"
   }
 }

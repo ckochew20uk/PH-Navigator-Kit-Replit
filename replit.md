@@ -30,8 +30,8 @@ See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and pa
 
 Mailchimp newsletter signup is integrated via manual API credentials (user declined Replit OAuth connector).
 
-- `MAILCHIMP_LIST_ID` — stored as a shared env var (audience ID: `a0668d6ca8`)
-- `MAILCHIMP_API_KEY` — stored as a Replit secret (user's API key, server prefix `us14`)
+- `MAILCHIMP_LIST_ID` — stored as a shared env var (audience ID: `e1bd27b3dd`)
+- `MAILCHIMP_API_KEY` — stored as a Replit secret (user's API key, server prefix `us11`)
 
 Two newsletter endpoints exist:
 - **Replit dev**: `artifacts/api-server/src/routes/newsletter.ts` → `POST /api/newsletter/subscribe` (Express)
@@ -59,7 +59,7 @@ The site is structured for zero-server deployment on Cloudflare Pages.
 | `BASE_PATH` | `/` | Required for Vite base config |
 | `PORT` | `3000` | Required to pass build-time check |
 | `MAILCHIMP_API_KEY` | *(user's key)* | Mark as secret |
-| `MAILCHIMP_LIST_ID` | `a0668d6ca8` | Mailchimp audience ID |
+| `MAILCHIMP_LIST_ID` | `e1bd27b3dd` | Mailchimp audience ID |
 
 ### How it works
 
